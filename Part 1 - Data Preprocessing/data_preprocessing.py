@@ -23,3 +23,15 @@ imputer = Imputer(missing_values = 'NaN', strategy = 'mean', axis = 0)
 imputer = imputer.fit(x[:, 1:3])
 
 x[:, 1:3] = imputer.transform(x[:, 1:3])
+
+# cotegorities data to codification
+
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+
+labelEncoder_X = LabelEncoder()
+x[:, 0] = labelEncoder_X.fit_transform(x[:, 0])
+onehotencoder = OneHotEncoder(categorical_features=[0])
+x = onehotencoder.fit_transform(x).toarray()
+
+labelEncoder_Y = LabelEncoder()
+y = labelEncoder_Y.fit_transform(y)
