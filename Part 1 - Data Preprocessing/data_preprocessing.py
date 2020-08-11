@@ -24,7 +24,7 @@ imputer = imputer.fit(x[:, 1:3])
 
 x[:, 1:3] = imputer.transform(x[:, 1:3])
 
-# cotegorities data to codification
+#coding category var in dataset
 
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
@@ -35,3 +35,9 @@ x = onehotencoder.fit_transform(x).toarray()
 
 labelEncoder_Y = LabelEncoder()
 y = labelEncoder_Y.fit_transform(y)
+
+
+#Split dataset in two subset 'Testing' and 'Training'
+from sklearn.cross_validation import train_test_split
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2,random_state = 0)
