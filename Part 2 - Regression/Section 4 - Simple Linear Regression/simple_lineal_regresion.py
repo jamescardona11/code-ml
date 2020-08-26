@@ -28,3 +28,28 @@ sc_x = StandardScaler()
 x_train = sc_x.fit_transform(x_train)
 x_test = sc_x.transform(x_test)
 #"""
+
+#Create a simple regression model for train subset
+from sklearn.linear_model import LinearRegression
+regression = LinearRegression()
+regression.fit(x_train, y_train)
+
+# Use the test subset
+y_pred = regression.predict(x_test)
+
+#creat a plot to see data train
+plt.scatter(x_train, y_train, color="red")
+plt.plot(x_train, regression.predict(x_train), color = "blue")
+plt.title("Salary vs Time of Experience")
+plt.xlabel("Time of Expereience")
+plt.ylabel("Salary $")
+plt.show()
+
+
+#creat a plot to see data test
+plt.scatter(x_test, y_test, color="red")
+plt.plot(x_train, regression.predict(x_train), color = "blue")
+plt.title("Salary vs Time of Experience")
+plt.xlabel("Time of Expereience")
+plt.ylabel("Salary $")
+plt.show()

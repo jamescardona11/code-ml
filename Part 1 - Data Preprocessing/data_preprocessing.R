@@ -3,6 +3,7 @@
 dataset = read.csv('Data.csv')
 
 #Split dataset in two subset 'Testing' and 'Training'
+library(caTools)
 set.seed(123)
 split = sample.split(dataset$Purchased, SplitRatio = 0.8)
 training_set = subset(dataset, split == TRUE)
