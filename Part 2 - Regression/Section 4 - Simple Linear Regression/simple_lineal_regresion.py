@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+#LINEAR REGRESSION SIMPLE
 Created on Thu Aug 13 20:07:46 2020
 
 @author: zoro
