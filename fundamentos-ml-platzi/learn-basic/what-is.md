@@ -1,0 +1,1 @@
+![](./assets/mapaconceptual.png)
