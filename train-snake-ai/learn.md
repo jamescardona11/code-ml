@@ -24,7 +24,7 @@ food left, food right, food up, food down
 
 ### model
 
-11 state -> model -> 3 actionå
+11 state -> model -> 3 action
 
 ![](./model.png)
 
@@ -51,3 +51,10 @@ Qnew = R + ¥max(Q(state1))
 #### loss function
 
 loss = (Qnew - Q)^2
+
+# modificaciones para el juego
+
+1. que la IA pueda enviar una acción
+2. retornar rewards
+3. retornar el score
+4. retornar si el juego termino
